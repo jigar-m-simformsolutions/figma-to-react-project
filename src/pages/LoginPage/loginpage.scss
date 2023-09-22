@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+@import "../../common.scss";
+
+.login__container {
+  margin-top: 3%;
+  @include for-mobile {
+    width: 100%;
+    padding: 10px;
+  }
+
+  @include for-tablet {
+    width: 50%;
+  }
+
+  @include for-laptop {
+    width: 25%;
+  }
+
+  @include for-desktop {
+    width: 25%;
+  }
+}

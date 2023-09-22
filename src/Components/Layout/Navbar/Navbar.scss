@@ -1,0 +1,43 @@
+@import "../../../common.scss";
+@import "../../../variables.scss";
+
+.navbar__container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  @apply items-center justify-between;
+  .right__sideof__navbar {
+    > ul {
+      list-style-type: none;
+      @apply font-semibold;
+      > li {
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      @include for-desktop {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+      @include for-laptop {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      @include for-mobile {
+        display: none;
+      }
+
+      @include for-tablet {
+        display: none;
+      }
+    }
+
+    // display: flex;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../variables.scss";
+
+.custom__btn {
+  background-color: $primary-color;
+  color: $text-color;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  @apply py-2 px-6 h-12 rounded text-center font-semibold;
+}

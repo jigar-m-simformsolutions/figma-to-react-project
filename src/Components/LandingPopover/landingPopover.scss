@@ -1,0 +1,37 @@
+@import "../../variables.scss";
+
+.landing__popover__container {
+  margin-top: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  color: black;
+  &:hover {
+    color: black;
+  }
+  .left__box {
+    width: 50%;
+    padding: 1.5rem;
+    @apply flex flex-col gap-4;
+    > .get__started__text {
+      color: $primary-color;
+      font-weight: 700;
+    }
+    p {
+      text-align: start;
+    }
+  }
+  .right__box {
+    width: 50%;
+    padding: 1.5rem;
+    @apply flex justify-between;
+    > ul > li:hover {
+      color: $primary-color;
+    }
+    > ul > li:first-child {
+      color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
