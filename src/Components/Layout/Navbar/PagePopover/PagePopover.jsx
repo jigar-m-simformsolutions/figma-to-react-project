@@ -1,8 +1,8 @@
 import { Popover } from "@headlessui/react";
-import "./PagePopover.scss";
-import { DownArrowIcon } from "../../assets/Icons/downArrowIcon";
-import { RightArrowIcon } from "../../assets/Icons/RightArrowIcon";
+import { DownArrowIcon } from "../../../../assets/Icons/downArrowIcon";
+import { RightArrowIcon } from "../../../../assets/Icons/RightArrowIcon";
 import { useNavigate } from "react-router-dom";
+import "./PagePopover.scss";
 
 const pagesArray = [
   {

@@ -1,6 +1,6 @@
-import { DocumentationIcon } from "../../assets/Icons/DocumentationsIcon";
-import { OverviewIcon } from "../../assets/Icons/OverviewIcon";
-import { DownArrowIcon } from "../../assets/Icons/downArrowIcon";
+import { DocumentationIcon } from "../../../../assets/Icons/DocumentationsIcon";
+import { OverviewIcon } from "../../../../assets/Icons/OverviewIcon";
+import { DownArrowIcon } from "../../../../assets/Icons/downArrowIcon";
 import "./landingPopover.scss";
 import { Popover } from "@headlessui/react";
 

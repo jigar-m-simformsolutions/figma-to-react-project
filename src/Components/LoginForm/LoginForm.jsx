@@ -3,7 +3,7 @@ import Button from "../design-patterns/Button/Button";
 export default function LoginForm() {
   return (
     <form>
-      <div className="flex flex-col gap-2  mb-4">
+      <div className="flex flex-col gap-2 mb-4">
         <label className="font-semibold" htmlFor="email">
           Email address
         </label>
