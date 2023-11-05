@@ -4,7 +4,8 @@ import {
   InstagramOutlined,
   LinkedinFilled,
 } from "@ant-design/icons";
-import ehyaLogo from "../../../assets/Images/ehya-logo.jpg";
+import ehyaLogo from "../../../../assets/Images/ehya-logo.jpg";
+import "./FooterLogoItem.scss";
 
 export default function FooterLogoItem() {
   return (

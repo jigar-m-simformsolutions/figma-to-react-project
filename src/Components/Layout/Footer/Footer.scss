@@ -1,96 +1,32 @@
 @import "../../../common.scss";
 @import "../../../variables.scss";
 
-.footer__container {
+.footer__container__laptop__screen {
   margin: auto;
-  @include for-mobile {
-    width: 100%;
-    padding: 10px;
-  }
-
-  @include for-tablet {
-    width: 100%;
-    padding: 10px;
-  }
-
-  @include for-laptop {
-    width: 90%;
-  }
-
-  @include for-desktop {
-    width: 90%;
-  }
-
-  > div {
+  width: 90%;
+  > .footer__first__wrapper {
     display: flex;
     gap: 29px;
-    .listing__items {
-      width: 15%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      flex-wrap: wrap;
-      > li {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
-        color: #183b56;
-        &:first-child {
-          font-weight: 700;
-        }
-      }
-    }
   }
-  .footer__logo__container {
-    width: 25%;
+}
+
+.footer__container__tablet__screen {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  > .footer__first__wrapper,
+  .footer__second__wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    > .icon__listing {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      > span {
-        text-align: center;
-        width: 42px;
-        height: 40px;
-        border-radius: 50%;
-        padding: 10px;
-        background-color: rgb(232, 230, 230);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        > .anticon {
-          color: #5a7184;
-        }
-      }
-    }
+    margin: 30px 0;
+    justify-content: flex-end;
   }
-  .footer__last__container {
-    width: 25%;
-    margin: auto;
+}
+
+.footer__container__mobile__screen {
+  > .footer__first__wrapper,
+  .footer__second__wrapper,
+  .footer__third__wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin-top: 100px;
-    > span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: #1576d8;
-      box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-      width: 56px;
-      height: 56px;
-      flex-shrink: 0;
-      > .anticon {
-        font-size: 24px;
-        color: white;
-      }
-    }
-    > p {
-      font-weight: 600;
-    }
+    margin: 25px 15px;
   }
 }

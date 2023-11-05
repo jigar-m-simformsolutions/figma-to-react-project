@@ -1,52 +1,61 @@
-import useScreenType from "../../../hooks/useScreenType";
-import ListItems from "./ListItems";
+import useScreenType from "../../../hooks/useScreenType.hooks";
+import ListItems from "./FooterListItem/ListItems";
 import "./Footer.scss";
-import FooterLogoItem from "./FooterLogoItem";
-import { HeartFilled } from "@ant-design/icons";
-
-const productlist = [
-  "Product",
-  "Landingpage",
-  "Features",
-  "Documentation",
-  "Referral Program",
-  "Pricing",
-];
-
-const serviceList = [
-  "Services",
-  "Documentation",
-  "Design",
-  "Themes",
-  "Illustrations",
-  "UI Kits",
-];
-
-const companyList = ["Company", "About", "Terms", "Privacy Policy", "Careers"];
-
-const moreList = ["More", "Documantation", "License", "Changelog"];
+import FooterLogoItem from "./FooterLogoItem/FooterLogoItem";
+import FooterLastContainer from "./FooterLastContainer/FooterLastContainer";
+import { footerList } from "../../../config/Constants";
 
 export default function Footer() {
   const { isDesktopScreen, isLaptopScreen, isMobileScreen, isTabletScreen } =
     useScreenType();
 
-  return (
-    <div className="footer__container">
-      <div>
-        {(isDesktopScreen || isLaptopScreen || isTabletScreen) && (
+  if (isDesktopScreen || isLaptopScreen) {
+    return (
+      <div className="footer__container__laptop__screen">
+        <div className="footer__first__wrapper">
           <FooterLogoItem />
-        )}
-        <ListItems arr={productlist} />
-        <ListItems arr={serviceList} />
-        <ListItems arr={companyList} />
-        <ListItems arr={moreList} />
+          <ListItems arr={footerList.productlist} />
+          <ListItems arr={footerList.serviceList} />
+          <ListItems arr={footerList.companyList} />
+          <ListItems arr={footerList.moreList} />
+        </div>
+        <div>
+          <FooterLastContainer />
+        </div>
       </div>
-      <div className="footer__last__container">
-        <span>
-          <HeartFilled />
-        </span>
-        <p>Copyright © 2019. Crafted with love.</p>
+    );
+  } else if (isTabletScreen) {
+    return (
+      <div className="footer__container__tablet__screen">
+        <div className="footer__first__wrapper">
+          <FooterLogoItem />
+          <ListItems arr={footerList.productlist} />
+          <ListItems arr={footerList.serviceList} />
+        </div>
+        <div className="footer__second__wrapper">
+          <ListItems arr={footerList.companyList} />
+          <ListItems arr={footerList.moreList} />
+        </div>
+        <div>
+          <FooterLastContainer />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else if (isMobileScreen) {
+    return (
+      <div className="footer__container__mobile__screen">
+        <div className="footer__first__wrapper">
+          <ListItems arr={footerList.productlist} />
+          <ListItems arr={footerList.serviceList} />
+        </div>
+        <div className="footer__second__wrapper">
+          <ListItems arr={footerList.companyList} />
+          <ListItems arr={footerList.moreList} />
+        </div>
+        <div className="footer__third__wrapper">
+          <FooterLogoItem />
+        </div>
+      </div>
+    );
+  } else return <></>;
 }
