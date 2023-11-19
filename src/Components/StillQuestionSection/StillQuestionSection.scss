@@ -1,0 +1,107 @@
+@import "../../common.scss";
+
+.still-have-quesion-container {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 100px;
+
+  @include for-desktop {
+    width: 60%;
+  }
+
+  @include for-laptop {
+    width: 60%;
+  }
+
+  @include for-tablet {
+    width: 80%;
+    padding: 0 10px;
+  }
+
+  @include for-mobile {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .title {
+    color: #183b56;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+  .description {
+    width: 60%;
+    text-align: center;
+  }
+
+  .customer-support-card-list {
+    display: flex;
+    gap: 20px;
+
+    @include for-desktop {
+      display: flex;
+      width: 100%;
+    }
+
+    @include for-laptop {
+      display: flex;
+      width: 100%;
+    }
+
+    @include for-tablet {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @include for-mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .support-card {
+      padding: 20px 60px;
+      gap: 10px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      border: 1px solid #e5eaf4;
+      background: #fff;
+      box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.03);
+
+      @include for-desktop {
+        width: 50%;
+      }
+
+      @include for-laptop {
+        width: 50%;
+      }
+
+      @include for-tablet {
+        width: 100%;
+      }
+
+      @include for-mobile {
+        width: 100%;
+      }
+
+      > .contact-detail {
+        color: #183b56;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 120% */
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+}

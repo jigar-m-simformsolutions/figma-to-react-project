@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "HK Grotesk";
+  src: url("./assets/fonts/HKGrotesk-Regular.otf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +14,5 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "HK Grotesk", sans-serif;
 }
