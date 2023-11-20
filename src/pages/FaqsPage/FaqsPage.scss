@@ -1,0 +1,198 @@
+@import "../../common.scss";
+
+.faqs-page-container {
+  height: 100vh;
+  .hero-container {
+    background-image: url("../../assets/Images/faqs-page-hero-img.png");
+    background-size: cover;
+    position: relative;
+    height: 80%;
+    margin-bottom: 100px;
+  }
+  .hero-labels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include for-desktop {
+      width: 60%;
+    }
+
+    @include for-laptop {
+      width: 60%;
+    }
+
+    @include for-tablet {
+      width: 80%;
+    }
+
+    @include for-mobile {
+      width: 90%;
+    }
+
+    > .mobile-search-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      > .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        > .search-icon {
+          @apply absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none;
+          > .icon {
+            color: #959ead;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+          }
+        }
+        > input {
+          @apply appearance-none py-4 px-12 w-full rounded-md border focus:outline-none placeholder-[#959EAD];
+        }
+      }
+      > .search-btn {
+        @apply px-5 py-3 rounded-md;
+        width: 100%;
+        background-color: #1565d8;
+        color: #fff;
+        text-align: center;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+
+    > .title {
+      color: #fff;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 60px; /* 125% */
+      letter-spacing: 0.2px;
+    }
+
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      > .search-icon {
+        @apply absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none;
+        > .icon {
+          color: #959ead;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: normal;
+        }
+      }
+      > input {
+        @apply appearance-none py-4 px-12 w-full rounded-md border focus:outline-none placeholder-[#959EAD];
+      }
+      > .btn-container {
+        @apply absolute right-0 pr-2;
+        > button {
+          @apply px-5 py-2 rounded-md;
+          background-color: #1565d8;
+          color: #fff;
+          text-align: center;
+          font-family: Open Sans;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  .faqs-page-listing {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+
+    @include for-desktop {
+      width: 80%;
+    }
+    @include for-laptop {
+      width: 80%;
+    }
+    @include for-tablet {
+      width: 100%;
+      padding: 0 10px;
+    }
+    @include for-mobile {
+      width: 100%;
+      padding: 0 10px;
+    }
+    .card {
+      display: flex;
+      gap: 20px;
+
+      @include for-desktop {
+        display: flex;
+      }
+      @include for-laptop {
+        display: flex;
+      }
+      @include for-tablet {
+        display: flex;
+        flex-direction: column;
+      }
+      @include for-mobile {
+        display: flex;
+        flex-direction: column;
+      }
+
+      > div {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid #e5eaf4;
+        background: #fff;
+        box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.03);
+
+        @include for-desktop {
+          width: 33.33%;
+        }
+        @include for-laptop {
+          width: 33.33%;
+        }
+        @include for-tablet {
+          width: 70%;
+          margin: auto;
+        }
+        @include for-mobile {
+          width: 100%;
+        }
+
+        > .title {
+          color: #183b56;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px; /* 120% */
+          letter-spacing: 0.2px;
+        }
+      }
+    }
+  }
+}

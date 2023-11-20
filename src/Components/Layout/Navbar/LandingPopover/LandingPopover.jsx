@@ -1,6 +1,6 @@
-import { DocumentationIcon } from "../../assets/Icons/DocumentationsIcon";
-import { OverviewIcon } from "../../assets/Icons/OverviewIcon";
-import { DownArrowIcon } from "../../assets/Icons/downArrowIcon";
+import { DocumentationIcon } from "../../../../assets/Icons/DocumentationsIcon";
+import { OverviewIcon } from "../../../../assets/Icons/OverviewIcon";
+import { DownArrowIcon } from "../../../../assets/Icons/downArrowIcon";
 import "./landingPopover.scss";
 import { Popover } from "@headlessui/react";
 
@@ -14,13 +14,13 @@ const servicesArray = [
 
 const ProductsArray = ["Products", "Desktop App", "Mobile App"];
 
-export default function LandingPopover() {
+export default function LandingPopover({ isWhite }) {
   return (
     <Popover className="relative">
       {({ open }) => (
         <>
           <Popover.Button className="flex gap-2 items-center focus:outline-none">
-            Landing <DownArrowIcon />
+            Landing <DownArrowIcon isWhite={isWhite} />
           </Popover.Button>
           {open && (
             <Popover.Panel className="absolute right-[-17rem] w-[40rem]">

@@ -1,43 +1,93 @@
 @import "../../../common.scss";
 @import "../../../variables.scss";
 
-.navbar__container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  @apply items-center justify-between;
-  .right__sideof__navbar {
-    > ul {
-      list-style-type: none;
-      @apply font-semibold;
-      > li {
-        text-align: center;
-        cursor: pointer;
-        &:hover {
-          color: $primary-color;
-        }
-      }
-
-      @include for-desktop {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-      }
-      @include for-laptop {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-      }
-
-      @include for-mobile {
-        display: none;
-      }
-
-      @include for-tablet {
-        display: none;
-      }
+.navbar_main_container {
+  width: 100%;
+  .navbar__container {
+    margin: auto;
+    display: flex;
+    height: 100px;
+    @include for-mobile {
+      width: 100%;
+      padding: 10px;
     }
 
-    // display: flex;
+    @include for-tablet {
+      width: 90%;
+      padding: 10px;
+    }
+
+    @include for-laptop {
+      width: 90%;
+    }
+
+    @include for-desktop {
+      width: 90%;
+    }
+
+    @apply items-center justify-between;
+    .right__sideof__navbar {
+      > ul {
+        list-style-type: none;
+        @apply font-semibold;
+        > li {
+          text-align: center;
+          cursor: pointer;
+          > .get-it-now-btn {
+            color: $primary-color;
+            padding: 10px 25px;
+            border: 2px solid $primary-color;
+            border-radius: 10px;
+          }
+          > .white-btn {
+            color: white;
+            padding: 10px 25px;
+            border: 2px solid white;
+            border-radius: 10px;
+          }
+        }
+
+        @include for-desktop {
+          display: flex;
+          gap: 40px;
+          align-items: center;
+        }
+        @include for-laptop {
+          display: flex;
+          gap: 40px;
+          align-items: center;
+        }
+
+        @include for-mobile {
+          display: none;
+        }
+
+        @include for-tablet {
+          display: none;
+        }
+      }
+    }
+    .drawer__container {
+      @apply lg:hidden;
+      > .drawer__wrapper {
+        @apply mt-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white h-[100%] w-[100%] p-6;
+        .drawer__close__btn {
+          @apply flex justify-end cursor-pointer;
+        }
+        .drawer__list__item > ul {
+          @apply flex flex-col gap-6;
+          > li {
+            @apply flex justify-between cursor-pointer;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            color: #183b56;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
   }
 }

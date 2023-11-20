@@ -1,0 +1,38 @@
+@import "../../../../common.scss";
+@import "../../../../variables.scss";
+
+.listing__items {
+  @include for-desktop {
+    width: 15%;
+  }
+
+  @include for-laptop {
+    width: 15%;
+  }
+
+  @include for-tablet {
+    width: 30%;
+  }
+
+  @include for-mobile {
+    width: 50%;
+  }
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+    > li {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #183b56;
+      cursor: pointer;
+      &:first-child {
+        font-weight: 700;
+        cursor: auto;
+      }
+    }
+  }
+}

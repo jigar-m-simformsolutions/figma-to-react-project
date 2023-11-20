@@ -1,8 +1,8 @@
 import { Popover } from "@headlessui/react";
-import "./PagePopover.scss";
-import { DownArrowIcon } from "../../assets/Icons/downArrowIcon";
-import { RightArrowIcon } from "../../assets/Icons/RightArrowIcon";
+import { DownArrowIcon } from "../../../../assets/Icons/downArrowIcon";
+import { RightArrowIcon } from "../../../../assets/Icons/RightArrowIcon";
 import { useNavigate } from "react-router-dom";
+import "./PagePopover.scss";
 
 const pagesArray = [
   {
@@ -35,7 +35,7 @@ const pagesArray = [
   },
 ];
 
-export default function PagePopover() {
+export default function PagePopover({ isWhite }) {
   const router = useNavigate();
 
   return (
@@ -43,7 +43,7 @@ export default function PagePopover() {
       {({ open }) => (
         <>
           <Popover.Button className="flex gap-2 items-center focus:outline-none">
-            Pages <DownArrowIcon />
+            Pages <DownArrowIcon isWhite={isWhite} />
           </Popover.Button>
           {open && (
             <Popover.Panel className="absolute w-[20rem] right-[-10rem]">

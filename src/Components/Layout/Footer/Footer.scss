@@ -1,0 +1,37 @@
+@import "../../../common.scss";
+@import "../../../variables.scss";
+
+.footer__container__laptop__screen {
+  margin: auto;
+  width: 90%;
+  padding-bottom: 30px;
+  > .footer__first__wrapper {
+    display: flex;
+    gap: 29px;
+  }
+}
+
+.footer__container__tablet__screen {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 30px;
+
+  > .footer__first__wrapper,
+  .footer__second__wrapper {
+    display: flex;
+    margin: 30px 0;
+    justify-content: flex-end;
+  }
+}
+
+.footer__container__mobile__screen {
+  padding-bottom: 30px;
+
+  > .footer__first__wrapper,
+  .footer__second__wrapper,
+  .footer__third__wrapper {
+    display: flex;
+    margin: 25px 15px;
+  }
+}

@@ -2,8 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
-import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import Error404 from "./pages/Error404/Error404";
+import HomePage from "./pages/HomePage/HomePage";
+import PricingPage from "./pages/PricingPage/PricingPage";
+import FaqsPage from "./pages/FaqsPage/FaqsPage";
 
 function App() {
   return (
@@ -12,8 +14,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
-        <Route path="/contact-us" element={<ContactUsPage />} />
         <Route path="/error-404" element={<Error404 />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/faqs" element={<FaqsPage />} />
       </Routes>
     </BrowserRouter>
   );

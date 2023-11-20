@@ -2,7 +2,6 @@ import classNames from "classnames";
 
 const Typography = ({ variant, className, children }) => {
   const typographyClasses = classNames(
-    // Add your default text styles based on variants
     {
       "text-lg font-semibold": variant === "h1",
       "text-base font-medium": variant === "h2",

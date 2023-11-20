@@ -1,0 +1,40 @@
+@import "../../common.scss";
+
+.plan-faqs-container {
+  text-align: center;
+  margin: 100px auto;
+
+  @include for-laptop {
+    width: 70%;
+  }
+
+  @include for-desktop {
+    width: 60%;
+  }
+
+  @include for-tablet {
+    width: 90%;
+  }
+
+  @include for-mobile {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .faq-title {
+    color: #183b56;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    letter-spacing: 0.2px;
+    margin-bottom: 30px;
+  }
+
+  .question-listing {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+}

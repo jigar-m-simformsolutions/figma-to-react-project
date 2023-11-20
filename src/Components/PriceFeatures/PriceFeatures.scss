@@ -1,0 +1,85 @@
+@import "../../common.scss";
+
+.pricing-plan-features-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  margin-bottom: 100px;
+
+  @include for-mobile {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  @include for-tablet {
+    padding: 0 10px;
+  }
+
+  .premium-badge {
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: #1565d8;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: #e4eaf4;
+  }
+
+  .feature-title {
+    color: #183b56;
+    text-align: center;
+    font-family: HK Grotesk;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+
+  .feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    .feature-list-box {
+      min-width: 45%;
+      height: 35%;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      @include for-desktop {
+        flex: 1;
+      }
+
+      @include for-laptop {
+        flex: 1;
+      }
+
+      @include for-mobile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        > .title {
+          color: #183b56;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px;
+          letter-spacing: 0.2px;
+        }
+      }
+    }
+  }
+}
