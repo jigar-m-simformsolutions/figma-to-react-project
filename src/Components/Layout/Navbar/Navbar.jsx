@@ -1,4 +1,3 @@
-import { DrawerIcon } from "../../../assets/Icons/DrawerIcon";
 import ehyaLogo from "../../../assets/Images/ehya-logo.jpg";
 import LandingPopover from "./LandingPopover/LandingPopover";
 import PagePopover from "./PagePopover/PagePopover";
@@ -6,28 +5,36 @@ import OutlineButton from "../../design-patterns/OutlinedButton/OutlinedButton";
 import { Disclosure } from "@headlessui/react";
 import { DrawerCloseIcon } from "../../../assets/Icons/DrawerCloseIcon";
 import { RightArrowIcon } from "../../../assets/Icons/RightArrowIcon";
+import ehyaLogoWhite from "../../../assets/Images/ehya-logo-white.png";
+import { MenuOutlined } from "@ant-design/icons";
 import "./Navbar.scss";
 
-export default function Navbar() {
+export default function Navbar({ isWhite = false }) {
   return (
     <div className="navbar_main_container">
       <header className={`navbar__container`}>
         <span>
-          <img src={ehyaLogo} alt="ehya-logo" />
+          {isWhite ? (
+            <img src={ehyaLogoWhite} alt="ehya-logo-white" />
+          ) : (
+            <img src={ehyaLogo} alt="ehya-logo" />
+          )}
         </span>
         <nav className="right__sideof__navbar">
-          <ul>
+          <ul className={`${isWhite ? "text-white" : ""}`}>
             <li>Home</li>
             <li>
-              <LandingPopover />
+              <LandingPopover isWhite={isWhite} />
             </li>
             <li>
-              <PagePopover />
+              <PagePopover isWhite={isWhite} />
             </li>
             <li>Docs</li>
             <li>Help</li>
             <li>
-              <OutlineButton>Get it now</OutlineButton>
+              <div className={`${isWhite ? "white-btn" : "get-it-now-btn"}`}>
+                Get it now
+              </div>
             </li>
           </ul>
         </nav>
@@ -36,7 +43,9 @@ export default function Navbar() {
             {({ open, close }) => (
               <>
                 <Disclosure.Button>
-                  <DrawerIcon />
+                  <MenuOutlined
+                    className={`${isWhite ? "text-xl text-white" : ""}`}
+                  />
                 </Disclosure.Button>
 
                 {open && (

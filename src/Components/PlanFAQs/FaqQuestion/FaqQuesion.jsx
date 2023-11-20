@@ -7,12 +7,12 @@ export default function FaqQuesion({ key, question, answer }) {
       <Disclosure
         key={key}
         as="div"
-        className="text-left w-full mb-4 shadow-md border rounded"
+        className="w-full mb-4 shadow-md border rounded"
       >
         {({ open }) => (
           <>
             <Disclosure.Button
-              className={`w-full flex justify-between items-center p-6 font-[700]  ${
+              className={`w-full text-left flex justify-between items-center p-6 font-[700]  ${
                 open
                   ? "border-b-0 pb-0 text-[#1565D8] font-[700]"
                   : "font-[600]"
@@ -28,7 +28,7 @@ export default function FaqQuesion({ key, question, answer }) {
               </span>
             </Disclosure.Button>
             <Disclosure.Panel
-              className={`p-6 border-t-0 ${open ? "pt-2" : ""}`}
+              className={`text-left p-6 border-t-0 ${open ? "pt-2" : ""}`}
             >
               {answer}
             </Disclosure.Panel>

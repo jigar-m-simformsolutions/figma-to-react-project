@@ -5,6 +5,7 @@ import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
 import Error404 from "./pages/Error404/Error404";
 import HomePage from "./pages/HomePage/HomePage";
 import PricingPage from "./pages/PricingPage/PricingPage";
+import FaqsPage from "./pages/FaqsPage/FaqsPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/error-404" element={<Error404 />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/faqs" element={<FaqsPage />} />
       </Routes>
     </BrowserRouter>
   );

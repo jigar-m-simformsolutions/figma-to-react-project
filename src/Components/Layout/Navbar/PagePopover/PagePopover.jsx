@@ -35,7 +35,7 @@ const pagesArray = [
   },
 ];
 
-export default function PagePopover() {
+export default function PagePopover({ isWhite }) {
   const router = useNavigate();
 
   return (
@@ -43,7 +43,7 @@ export default function PagePopover() {
       {({ open }) => (
         <>
           <Popover.Button className="flex gap-2 items-center focus:outline-none">
-            Pages <DownArrowIcon />
+            Pages <DownArrowIcon isWhite={isWhite} />
           </Popover.Button>
           {open && (
             <Popover.Panel className="absolute w-[20rem] right-[-10rem]">

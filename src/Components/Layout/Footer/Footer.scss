@@ -4,6 +4,7 @@
 .footer__container__laptop__screen {
   margin: auto;
   width: 90%;
+  padding-bottom: 30px;
   > .footer__first__wrapper {
     display: flex;
     gap: 29px;
@@ -14,6 +15,8 @@
   width: 90%;
   margin: auto;
   padding: 10px;
+  padding-bottom: 30px;
+
   > .footer__first__wrapper,
   .footer__second__wrapper {
     display: flex;
@@ -23,6 +26,8 @@
 }
 
 .footer__container__mobile__screen {
+  padding-bottom: 30px;
+
   > .footer__first__wrapper,
   .footer__second__wrapper,
   .footer__third__wrapper {
