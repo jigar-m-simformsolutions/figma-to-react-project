@@ -11,8 +11,8 @@ import "./Navbar.scss";
 
 export default function Navbar({ isWhite = false }) {
   return (
-    <div className="navbar_main_container">
-      <header className={`navbar__container`}>
+    <div className="navbar-main-container">
+      <header className={`navbar-container`}>
         <span>
           {isWhite ? (
             <img src={ehyaLogoWhite} alt="ehya-logo-white" />
@@ -20,7 +20,7 @@ export default function Navbar({ isWhite = false }) {
             <img src={ehyaLogo} alt="ehya-logo" />
           )}
         </span>
-        <nav className="right__sideof__navbar">
+        <nav className="right-sideof-navbar">
           <ul className={`${isWhite ? "text-white" : ""}`}>
             <li>Home</li>
             <li>
@@ -38,7 +38,7 @@ export default function Navbar({ isWhite = false }) {
             </li>
           </ul>
         </nav>
-        <div className="drawer__container">
+        <div className="drawer-container">
           <Disclosure>
             {({ open, close }) => (
               <>

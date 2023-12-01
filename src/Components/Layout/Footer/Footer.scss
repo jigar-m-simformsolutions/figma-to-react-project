@@ -1,36 +1,36 @@
 @import "../../../common.scss";
 @import "../../../variables.scss";
 
-.footer__container__laptop__screen {
+.footer-container-laptop-screen {
   margin: auto;
   width: 90%;
   padding-bottom: 30px;
-  > .footer__first__wrapper {
+  > .footer-first-wrapper {
     display: flex;
-    gap: 29px;
+    gap: 30px;
   }
 }
 
-.footer__container__tablet__screen {
+.footer-container-tablet-screen {
   width: 90%;
   margin: auto;
   padding: 10px;
   padding-bottom: 30px;
 
-  > .footer__first__wrapper,
-  .footer__second__wrapper {
+  > .footer-first-wrapper,
+  .footer-second-wrapper {
     display: flex;
     margin: 30px 0;
     justify-content: flex-end;
   }
 }
 
-.footer__container__mobile__screen {
+.footer-container-mobile-screen {
   padding-bottom: 30px;
 
-  > .footer__first__wrapper,
-  .footer__second__wrapper,
-  .footer__third__wrapper {
+  > .footer-first-wrapper,
+  .footer-second-wrapper,
+  .footer-third-wrapper {
     display: flex;
     margin: 25px 15px;
   }

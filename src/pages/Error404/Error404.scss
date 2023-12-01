@@ -1,11 +1,18 @@
 @import "../../common.scss";
 @import "../../variables.scss";
 
-.error__404__container {
+.error-404-page-container {
   margin: auto;
   height: 100vh;
 
   @apply flex flex-col gap-4 items-center justify-center;
+
+  .top-text {
+    @apply font-extrabold text-4xl text-center;
+  }
+  .top-sub-text {
+    @apply font-extralight text-base text-center;
+  }
   @include for-mobile {
     width: 100%;
     padding: 10px;

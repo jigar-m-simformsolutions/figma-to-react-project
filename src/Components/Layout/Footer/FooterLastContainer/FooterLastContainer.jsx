@@ -3,7 +3,7 @@ import "./FooterLastContainer.scss";
 
 export default function FooterLastContainer() {
   return (
-    <div className="footer__last__container">
+    <div className="footer-last-container">
       <span>
         <HeartFilled />
       </span>

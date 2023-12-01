@@ -1,7 +1,7 @@
 @import "../../../../common.scss";
 @import "../../../../variables.scss";
 
-.footer__logo__container {
+.footer-logo-container {
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -31,22 +31,17 @@
     width: 80%;
   }
 
-  > .icon__listing {
-    display: flex;
+  > .icon-listing {
+    @apply flex items-center;
     gap: 10px;
-    align-items: center;
     > span {
-      text-align: center;
+      @apply flex items-center justify-center text-center rounded-full cursor-pointer;
       width: 42px;
       height: 40px;
-      border-radius: 50%;
       padding: 10px;
       background-color: rgb(232, 230, 230);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       > .anticon {
-        color: #5a7184;
+        color: $icon-color;
       }
     }
   }

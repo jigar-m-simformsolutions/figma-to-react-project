@@ -1,8 +1,12 @@
 @import "../../variables.scss";
 @import "../../common.scss";
 
-.login__container {
+.login-page-container {
+  @apply mx-auto bg-white my-6;
   margin-top: 3%;
+  > .top-text {
+    @apply text-2xl font-extrabold text-center md:text-3xl mb-4;
+  }
   @include for-mobile {
     width: 100%;
     padding: 10px;
@@ -18,5 +22,11 @@
 
   @include for-desktop {
     width: 25%;
+  }
+  > .last-section {
+    @apply mt-6 font-semibold;
+    > a {
+      @apply ml-2 text-blue-500 hover:underline;
+    }
   }
 }

@@ -1,8 +1,8 @@
 import { DocumentationIcon } from "../../../../assets/Icons/DocumentationsIcon";
 import { OverviewIcon } from "../../../../assets/Icons/OverviewIcon";
 import { DownArrowIcon } from "../../../../assets/Icons/downArrowIcon";
-import "./landingPopover.scss";
 import { Popover } from "@headlessui/react";
+import "./landingPopover.scss";
 
 const servicesArray = [
   "Services",
@@ -16,7 +16,7 @@ const ProductsArray = ["Products", "Desktop App", "Mobile App"];
 
 export default function LandingPopover({ isWhite }) {
   return (
-    <Popover className="relative">
+    <Popover className="relative z-10">
       {({ open }) => (
         <>
           <Popover.Button className="flex gap-2 items-center focus:outline-none">
@@ -24,11 +24,9 @@ export default function LandingPopover({ isWhite }) {
           </Popover.Button>
           {open && (
             <Popover.Panel className="absolute right-[-17rem] w-[40rem]">
-              <div className="landing__popover__container">
-                <div className="left__box">
-                  <p className="get__started__text font-extrabold">
-                    Get Started
-                  </p>
+              <div className="landing-popover-container">
+                <div className="left-box">
+                  <p className="get-started-text">Get Started</p>
                   <div className="flex gap-4 items-center">
                     <span>
                       <OverviewIcon />
@@ -53,7 +51,7 @@ export default function LandingPopover({ isWhite }) {
                   </div>
                 </div>
                 <div className="border"></div>
-                <div className="right__box">
+                <div className="right-box">
                   <ul className="flex flex-col gap-2 text-start">
                     {servicesArray.map((val, idx) => (
                       <li key={idx}>{val}</li>

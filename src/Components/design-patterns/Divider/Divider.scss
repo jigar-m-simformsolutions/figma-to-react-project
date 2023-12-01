@@ -1,0 +1,12 @@
+.divider-container {
+  @apply flex items-center my-6;
+  > .divider-border-one {
+    @apply border-t h-[3px] border-gray-300 flex-grow mr-4 font-extrabold;
+  }
+  > .divider-text {
+    @apply text-gray-600 font-bold text-center;
+  }
+  > .divider-border-two {
+    @apply border-t border-gray-300 flex-grow ml-4;
+  }
+}
