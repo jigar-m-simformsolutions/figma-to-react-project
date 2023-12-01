@@ -1,18 +1,14 @@
 import ehyaLogo from "../../../assets/Images/ehya-logo.jpg";
 import LandingPopover from "./LandingPopover/LandingPopover";
 import PagePopover from "./PagePopover/PagePopover";
-import OutlineButton from "../../design-patterns/OutlinedButton/OutlinedButton";
-import { Disclosure } from "@headlessui/react";
-import { DrawerCloseIcon } from "../../../assets/Icons/DrawerCloseIcon";
-import { RightArrowIcon } from "../../../assets/Icons/RightArrowIcon";
 import ehyaLogoWhite from "../../../assets/Images/ehya-logo-white.png";
-import { MenuOutlined } from "@ant-design/icons";
 import "./Navbar.scss";
+import Drawer from "./Drawer/Drawer";
 
 export default function Navbar({ isWhite = false }) {
   return (
     <div className="navbar-main-container">
-      <header className={`navbar-container`}>
+      <header className="navbar-container">
         <span>
           {isWhite ? (
             <img src={ehyaLogoWhite} alt="ehya-logo-white" />
@@ -39,45 +35,7 @@ export default function Navbar({ isWhite = false }) {
           </ul>
         </nav>
         <div className="drawer-container">
-          <Disclosure>
-            {({ open, close }) => (
-              <>
-                <Disclosure.Button>
-                  <MenuOutlined
-                    className={`${isWhite ? "text-xl text-white" : ""}`}
-                  />
-                </Disclosure.Button>
-
-                {open && (
-                  <Disclosure.Panel className="drawer__wrapper">
-                    <div>
-                      <div className="drawer__close__btn" onClick={close}>
-                        <DrawerCloseIcon />
-                      </div>
-                      <div className="drawer__list__item">
-                        <ul>
-                          <li>Home</li>
-                          <li>
-                            <span>Landing </span>
-                            <RightArrowIcon />
-                          </li>
-                          <li>
-                            <span>Pages </span>
-                            <RightArrowIcon />
-                          </li>
-                          <li>Docs</li>
-                          <li>Help</li>
-                          <li>
-                            <OutlineButton block>Get it now</OutlineButton>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </Disclosure.Panel>
-                )}
-              </>
-            )}
-          </Disclosure>
+          <Drawer isWhite={isWhite} />
         </div>
       </header>
     </div>

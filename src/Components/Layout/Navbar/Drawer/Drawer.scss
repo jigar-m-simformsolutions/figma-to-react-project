@@ -1,0 +1,21 @@
+@import "../../../../variables.scss";
+
+.drawer-wrapper {
+  @apply mt-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white h-[100%] w-[100%] p-6;
+  .drawer-close-btn {
+    @apply flex justify-end cursor-pointer;
+  }
+  .drawer-list-item > ul {
+    @apply flex flex-col gap-6;
+    > li {
+      @apply flex justify-between cursor-pointer;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      color: #183b56;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
