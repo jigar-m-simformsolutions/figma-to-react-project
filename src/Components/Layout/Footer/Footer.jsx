@@ -11,8 +11,8 @@ export default function Footer() {
 
   if (isDesktopScreen || isLaptopScreen) {
     return (
-      <div className="footer__container__laptop__screen">
-        <div className="footer__first__wrapper">
+      <div className="footer-container-laptop-screen">
+        <div className="footer-first-wrapper">
           <FooterLogoItem />
           <ListItems arr={footerList.productlist} />
           <ListItems arr={footerList.serviceList} />
@@ -26,13 +26,13 @@ export default function Footer() {
     );
   } else if (isTabletScreen) {
     return (
-      <div className="footer__container__tablet__screen">
-        <div className="footer__first__wrapper">
+      <div className="footer-container-tablet-screen">
+        <div className="footer-first-wrapper">
           <FooterLogoItem />
           <ListItems arr={footerList.productlist} />
           <ListItems arr={footerList.serviceList} />
         </div>
-        <div className="footer__second__wrapper">
+        <div className="footer-second-wrapper">
           <ListItems arr={footerList.companyList} />
           <ListItems arr={footerList.moreList} />
         </div>
@@ -43,16 +43,16 @@ export default function Footer() {
     );
   } else if (isMobileScreen) {
     return (
-      <div className="footer__container__mobile__screen">
-        <div className="footer__first__wrapper">
+      <div className="footer-container-mobile-screen">
+        <div className="footer-first-wrapper">
           <ListItems arr={footerList.productlist} />
           <ListItems arr={footerList.serviceList} />
         </div>
-        <div className="footer__second__wrapper">
+        <div className="footer-second-wrapper">
           <ListItems arr={footerList.companyList} />
           <ListItems arr={footerList.moreList} />
         </div>
-        <div className="footer__third__wrapper">
+        <div className="footer-third-wrapper">
           <FooterLogoItem />
         </div>
       </div>

@@ -1,9 +1,9 @@
 @import "../../../common.scss";
 @import "../../../variables.scss";
 
-.navbar_main_container {
+.navbar-main-container {
   width: 100%;
-  .navbar__container {
+  .navbar-container {
     margin: auto;
     display: flex;
     height: 100px;
@@ -26,7 +26,7 @@
     }
 
     @apply items-center justify-between;
-    .right__sideof__navbar {
+    .right-sideof-navbar {
       > ul {
         list-style-type: none;
         @apply font-semibold;
@@ -67,8 +67,8 @@
         }
       }
     }
-    .drawer__container {
-      @apply lg:hidden;
+    .drawer-container {
+      @apply lg:hidden z-10;
       > .drawer__wrapper {
         @apply mt-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white h-[100%] w-[100%] p-6;
         .drawer__close__btn {

@@ -1,7 +1,7 @@
 @import "../../../../common.scss";
 @import "../../../../variables.scss";
 
-.listing__items {
+.listing-items {
   @include for-desktop {
     width: 15%;
   }
@@ -19,10 +19,8 @@
   }
 
   > ul {
-    display: flex;
-    flex-direction: column;
+    @apply flex flex-col flex-wrap;
     gap: 15px;
-    flex-wrap: wrap;
     > li {
       font-size: 16px;
       font-weight: 400;

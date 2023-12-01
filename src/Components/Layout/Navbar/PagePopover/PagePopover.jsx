@@ -39,7 +39,7 @@ export default function PagePopover({ isWhite }) {
   const router = useNavigate();
 
   return (
-    <Popover className="relative">
+    <Popover className="relative z-10">
       {({ open }) => (
         <>
           <Popover.Button className="flex gap-2 items-center focus:outline-none">
@@ -47,7 +47,7 @@ export default function PagePopover({ isWhite }) {
           </Popover.Button>
           {open && (
             <Popover.Panel className="absolute w-[20rem] right-[-10rem]">
-              <div className="pages__popover__container">
+              <div className="pages-popover-container">
                 <ul>
                   {pagesArray.map((val, idx) => (
                     <li onClick={() => router(val.link)} key={idx}>

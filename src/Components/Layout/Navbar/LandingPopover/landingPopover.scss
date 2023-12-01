@@ -1,6 +1,6 @@
 @import "../../../../variables.scss";
 
-.landing__popover__container {
+.landing-popover-container {
   margin-top: 20px;
   border-radius: 12px;
   background: #fff;
@@ -10,22 +10,20 @@
   &:hover {
     color: black;
   }
-  .left__box {
+  .left-box {
     width: 50%;
-    padding: 1.5rem;
-    @apply flex flex-col gap-4;
-    > .get__started__text {
+    @apply flex flex-col gap-4 p-6;
+    > .get-started-text {
+      @apply font-extrabold;
       color: $primary-color;
-      font-weight: 700;
     }
     p {
       text-align: start;
     }
   }
-  .right__box {
+  .right-box {
     width: 50%;
-    padding: 1.5rem;
-    @apply flex justify-between;
+    @apply flex justify-between p-6;
     > ul > li:hover {
       color: $primary-color;
     }

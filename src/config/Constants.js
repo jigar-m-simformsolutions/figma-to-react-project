@@ -6,7 +6,7 @@ import { MarketingIcon } from "../assets/Icons/MarketingIcon";
 export const footerList = {
   productlist: [
     "Product",
-    "Landingpage",
+    "Landing Page",
     "Features",
     "Documentation",
     "Referral Program",
