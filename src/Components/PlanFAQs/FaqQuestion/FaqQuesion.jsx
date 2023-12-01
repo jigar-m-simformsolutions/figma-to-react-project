@@ -12,7 +12,7 @@ export default function FaqQuesion({ key, question, answer }) {
         {({ open }) => (
           <>
             <Disclosure.Button
-              className={`w-full text-left flex justify-between items-center p-6 font-[700]  ${
+              className={`w-full text-left flex justify-between items-center p-6 font-[700] ${
                 open
                   ? "border-b-0 pb-0 text-[#1565D8] font-[700]"
                   : "font-[600]"
